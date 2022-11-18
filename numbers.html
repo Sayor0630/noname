@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: white;
+        color: black;
+      }
+      
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      </style>
+    <title>Numbers</title>
+  </head>
+  <body>
+    <img src="./images/MCU-logo.png" id="mcu-logo" alt="Picture of Avengers" />
+    <h3>Marvel Cinematic Universe</h3>
+    <button onclick="darkFunction()">Toggle dark mode</button>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+    </ul>
+    <img
+      src="./images/MCU.jpg"
+      width="70%"
+      alt="A picture of Avengers from MCU"
+    />
+    <script>
+      function darkFunction() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+      }
+      </script>
+  </body>
+</html>
