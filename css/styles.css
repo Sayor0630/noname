@@ -466,14 +466,13 @@ h4:hover::after {
         padding: 0px 50px 0px 100px;
         border-radius: 0px;
         transition: all 0.3s ease;
-        z-index: 100000;
+        z-index: 200;
     }
     nav .menu-btn i {
         display: block;
     }
     #checkbox:checked ~ .menu-btn i:before {
-        content: '\f00d';
-        font: var(--fa-font-solid);
+        content: '\f057';
     }
     .hidden-nav{
         position: fixed;
