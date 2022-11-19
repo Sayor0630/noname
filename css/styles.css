@@ -473,6 +473,7 @@ h4:hover::after {
     }
     #checkbox:checked ~ .menu-btn i:before {
         content: '\f057';
+        font: var(--fa-font-regular);
     }
     .hidden-nav{
         position: fixed;
