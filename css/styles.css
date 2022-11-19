@@ -79,6 +79,10 @@ nav .menu-btn i {
     display: none;
 }
 
+.hidden-nav{
+    display: none;
+}
+
 #checkbox{
     display: none;
 }
@@ -462,14 +466,16 @@ h4:hover::after {
         padding: 0px 50px 0px 100px;
         border-radius: 0px;
         transition: all 0.3s ease;
+        z-index: 100000;
     }
     nav .menu-btn i {
         display: block;
     }
     #checkbox:checked ~ .menu-btn i:before {
-        content: "\f00d";
+        content: '\f00d';
+        font: var(--fa-font-solid);
     }
-    nav ul{
+    .hidden-nav{
         position: fixed;
         top: 80px;
         left: -100%;
@@ -479,6 +485,10 @@ h4:hover::after {
         display: block;
         text-align: center;
         transition: all 0.3s ease;
+        z-index: 100;
+    }
+    nav ul{
+        display: none;
     }
     #checkbox:checked ~ ul {
         left: 0%;
@@ -621,7 +631,7 @@ h4:hover::after {
 	display: block;
 	border-radius: 50px;
 	box-shadow: inset  0 0 0 2px rgba(0,0,0,0.2);
-	z-index: 10000;
+	z-index: 3;
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(15px);

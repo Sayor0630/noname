@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://kit.fontawesome.com/9c5a962481.js" crossorigin="anonymous"></script>
     <title>MCU Movies</title>
@@ -14,7 +15,6 @@
     <header class="header">   
       <nav>  
         <img src="./images/MCU-logo.png" alt="Avengers" class="logo">
-        <input type="checkbox" id="checkbox">
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
@@ -27,6 +27,12 @@
               <option value="light">Light</option>
               <option value="dark">Dark</option>
           </select>
+          <input type="checkbox" id="checkbox">
+          <ul class="hidden-nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
           <label for="checkbox" class="menu-btn">
             <i class="fas fa-bars"></i>
             </label>
