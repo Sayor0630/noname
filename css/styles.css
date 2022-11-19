@@ -441,9 +441,9 @@ h4:hover::after {
     .main .table {
         margin-left: -5.5%;
         margin-top: 1%;
-        padding: 0 0.4% 0.2% 5%;
+        padding-left: 5%;
         position: relative;
-        width: 340px;
+        width: 420px;
     }
     .main h2{
         margin-left: -5%;
@@ -529,9 +529,7 @@ h4:hover::after {
     .main .table {
         margin-left: -5.5%;
         margin-top: 1%;
-        padding: 0 0.4% 0.2% 5%;
         position: relative;
-        width: 340px;
     }
     .main h2 {
         margin-left: -5%;
@@ -565,7 +563,7 @@ h4:hover::after {
         transition: all 0.1s ease;
     }
     .main .table {
-        margin-left: -9.5%;
+        margin-left: -13.5%;
         margin-top: 1%;
         padding: 0 0.4% 0.2% 10%;
         position: relative;
