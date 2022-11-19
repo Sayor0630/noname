@@ -37,13 +37,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 50px 0px 100px;
+    padding-left: 1%;
+    padding-right: 1%;
     border-radius: 5px;
 }
 
 nav .logo{
     height: 80%;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -137,8 +139,6 @@ body {
     --text-color: #333333; 
     --primary-color: #009578;
     --font-family: 'Quicksand', sans-serif;
-
-    
     color: var(--text-color);
     font-family: var(--font-family);
     background: var(--background-color);
@@ -161,8 +161,8 @@ body.theme-dark {
 }
 
 .accordion{
-    margin-left: -30px;
-    width: 600px;
+    margin-left: -20px;
+    width: 100%;
 }
 
 .accordion li{
@@ -170,9 +170,9 @@ body.theme-dark {
     width: 100%;
     margin: 20px;
     padding: 10px;
+    padding-left: 3%;
     border-radius: 8px;
     background: #1abc9c;
-    
 }
 
 .accordion li label{
@@ -182,7 +182,7 @@ body.theme-dark {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    
+    height: 80px;
 }
 
 .accordion li a{
@@ -192,11 +192,23 @@ body.theme-dark {
 }
 
 .accordion label::before{
+	content: '\f105';
+    font: var(--fa-font-solid);
+    font-size: 30px;
     height: 35px;
-    content: '+';
     margin-right: 10px;
-    font-size: 24px;
     font-weight: 600;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordion input[type="checkbox"]:checked + label::before{
+    content: '\f107';
+    font: var(--fa-font-solid);
+    font-size: 30px;
 }
 
 input[type="checkbox"]{
@@ -213,7 +225,7 @@ input[type="checkbox"]{
 
 
 .accordion .content .movie-links{
-    width: 93%;
+    width: 95%;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
@@ -232,6 +244,11 @@ input[type="checkbox"]{
     position: relative;
 }
 
+.about-links::before{
+    content: '\f35d';
+    font: var(--fa-font-solid);
+}
+
 .accordion .content .about-links::after{
     content: "";
     position: absolute;
@@ -240,7 +257,6 @@ input[type="checkbox"]{
     width: 100%;
     height: 2px;
     background: currentColor;
-
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 250ms ease-in;
@@ -249,17 +265,6 @@ input[type="checkbox"]{
 .accordion .content .about-links:hover::after{
     transform: scaleX(1);
     transform-origin: left;
-}
-
-
-
-.accordion input[type="checkbox"]:checked + label + .content{
-    max-height: 400px;
-    padding: 10px 10px 20px;
-}
-
-.accordion input[type="checkbox"]:checked + label::before{
-    content: '-';
 }
 
 .main {
@@ -275,10 +280,33 @@ input[type="checkbox"]{
 }
 
 .main .MCU {
-    margin-left: 15%;
+        width: 100%;
+        border-radius: 10px;
 }
 
+.button{
+    margin-top: 5px;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: block;
+    border-style: none;
+    background: #1abc9c;
+    font-size: 15px;
+    font-weight: 500px;
+    max-height: fit-content;
+    max-width: fit-content;
+    padding-left: 3%;
+    padding-right: 3%;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
 
+.button:hover{
+    color: black;
+    background-color: white;
+}
 
 .link {
     text-decoration: none;
@@ -294,7 +322,6 @@ input[type="checkbox"]{
     width: 100%;
     height: 2px;
     background: currentColor;
-
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 250ms ease-in;
@@ -329,19 +356,42 @@ input[type="checkbox"]{
 }
 
 .table {
-    border: 2px solid black;
+    border: 5px solid;
     border-spacing: 5px;
-    border-radius:2%;
+    border-radius:10px;
     border-color: #1abc9c;
     color: #1abc9c;
-    padding: 0 0.4% 0.2% 2.5%;
+    padding: 0.5% 0.8% 0.5% 2.0%;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    margin-left: -24%;
+    margin-top: -30%;
+    width: 426px;
+}
+
+.table li{
     align-items: center;
 }
 
-.table li, a {
+.table li a {
     text-decoration: none;
     color: #1abc9c;
+    display: block;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.table li a:hover{
+    color: white;
+    background-color: #1abc9c;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
 }
 
 h4 {
@@ -359,7 +409,6 @@ h4::after {
     width: 100%;
     height: 2px;
     background: currentColor;
-
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 250ms ease-in;
@@ -420,6 +469,34 @@ h4:hover::after {
     font-weight: 700;
 }
 
+@media (max-width: 1830px) {
+    .main {
+        margin-left: 10%;
+        transition: all 0.3s ease;
+    }
+    .main .title {
+
+        transition: all 0.3s ease;
+    }
+    .main .MCU {
+        margin-left: -6%;
+        transition: all 0.3s ease;
+    }
+    .main .table {
+        margin-left: -5.5%;
+        margin-top: 1%;
+        padding: 0 0.4% 0.2% 5%;
+        position: relative;
+        width: 340px;
+    }
+    .main h2{
+        margin-left: -5%;
+    }
+    .accordion {
+        margin-left: -7.5%;
+    }
+}
+
 @media (max-width: 940px) {
     .main {
         margin-left: 10%;
@@ -429,11 +506,11 @@ h4:hover::after {
         width: 80%;
     }
     .main .title {
-        margin-left: -10%;
+        margin-left: -11%;
         transition: all 0.3s ease;
     }
     .main .MCU {
-        margin-left: 10%;
+        margin-left: -6%;
         transition: all 0.3s ease;
     }
     .main .body {
@@ -442,24 +519,68 @@ h4:hover::after {
         transition: all 0.3s ease;
     }
     .main .table {
+        margin-left: -5.5%;
+        margin-top: 1%;
         padding: 0 0.4% 0.2% 5%;
+        position: relative;
+        width: 340px;
+    }
+    .main h2 {
+        margin-left: -5%;
+        font-size: 25px;
+    }
+    .accordion {
+        margin-left: -8.5%;
+    }
+    .accordion li {
+        margin-left: 3%;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .accordion li label {
+        font-size: 18px;
+        height: 50px;
+    }
+    .accordion .content {
+        font-size: 15px;
     }
 }
 
 @media (max-width: 445px) {
     .main .MCU {
         margin-top: 10%;
-        margin-left: 8%;
+        margin-left: -6.5%;
         transition: all 0.1s ease;
     }
     .main .table {
+        margin-left: -9.5%;
+        margin-top: 1%;
         padding: 0 0.4% 0.2% 10%;
-        margin-left: -20%;
+        position: relative;
+        width: 340px;
     }
-    
+    .main h2 {
+        margin-left: -8.5%;
+        font-size: 19px;
+    }
+    .accordion {
+        margin-left: -12%;
+    }
+    .accordion li {
+        margin-left: 3%;
+        width: 105%;
+        border-radius: 5px;
+    }
+    .accordion li label {
+        font-size: 18px;
+        height: 40px;
+    }
+    .accordion .content {
+        font-size: 13px;
+    }
     .pages ul{
         font-size: 10px;
-        margin-left: -10%;
+        margin-left: 5%;
     }
     .pages ul li {
         line-height: 50px;
@@ -484,10 +605,8 @@ h4:hover::after {
         font-size: small;
         width: 140%;
         display: block;
-        max-width: 130vw;
-           
-    }
-        
+        max-width: 130vw;    
+    } 
 }
 
 
@@ -499,8 +618,8 @@ h4:hover::after {
 	position: fixed;
 	right: 50px;
 	bottom: 50px;
-	height: 46px;
-	width: 46px;
+	height: 60px;
+	width: 60px;
 	cursor: pointer;
 	display: block;
 	border-radius: 50px;
@@ -522,13 +641,13 @@ h4:hover::after {
 	font-family: 'unicons';
 	content: '\e84b';
 	text-align: center;
-	line-height: 46px;
-	font-size: 24px;
+	line-height: 60px;
+	font-size: 30px;
 	color: var(--black-blue);
 	left: 0;
 	top: 0;
-	height: 46px;
-	width: 46px;
+	height: 60px;
+	width: 60px;
 	cursor: pointer;
 	display: block;
 	z-index: 1;
@@ -543,16 +662,16 @@ h4:hover::after {
 	font-family: 'unicons';
 	content: '\e84b';
 	text-align: center;
-	line-height: 46px;
-	font-size: 24px;
+	line-height: 60px;
+	font-size: 30px;
 	opacity: 0;
 	background-image: linear-gradient(298deg, #1abc9c, #1abc9c);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	left: 0;
 	top: 0;
-	height: 46px;
-	width: 46px;
+	height: 60px;
+	width: 60px;
 	cursor: pointer;
 	display: block;
 	z-index: 2;
