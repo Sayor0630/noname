@@ -455,15 +455,16 @@ h4:hover::after {
 
 @media (max-width: 940px) {
     nav {
-        margin-top: 0.1%;
-        margin-left: -0.1%;
+        margin-top: 0;
+        margin-left: 0;
         height: 80px;
         width: 100%;
         background: #1abc9c;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0px 50px 0px 100px;
+        padding-left: 2%;
+        padding-right: 2%;
         border-radius: 0px;
         transition: all 0.3s ease;
         z-index: 200;
@@ -554,6 +555,10 @@ h4:hover::after {
 }
 
 @media (max-width: 445px) {
+    nav {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
     .main .MCU {
         margin-top: 10%;
         margin-left: -6.5%;
