@@ -20,12 +20,16 @@
 	--black-light: #424455;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
     transition: all 0.2s ease;
 }
+
+
 
 nav {
     height: 80px;
@@ -33,7 +37,11 @@ nav {
     margin-top: 1%;
     margin-left: 1%;
     margin-right: 1%;
-    background: #1abc9c;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,7 +66,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -69,8 +77,11 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #1abc9c;
-    background: #fff;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 nav .menu-btn i {
@@ -128,7 +139,12 @@ body.theme-dark {
     padding: 10px;
     padding-left: 3%;
     border-radius: 8px;
-    background: #1abc9c;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.1s ease;
 }
 
 .accordion li label{
@@ -184,8 +200,8 @@ input[type="checkbox"]{
     width: 95%;
     cursor: pointer;
     border-radius: 8px;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(6, 255, 151, 0.452);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .accordion .content .movie-links:hover{
